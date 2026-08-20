@@ -1,0 +1,3091 @@
+{
+  "camera_id": "demo",
+  "name": "Surveillance Overview (Wide Angle)",
+  "zone_id": "zone_overview",
+  "zone_name": "Main Gym Floor Overview",
+  "video_file": "demo_video.mp4",
+  "frame_width": 1920,
+  "frame_height": 1080,
+  "fps": 25.0,
+  "duration": 45.92,
+  "equipment_rois": [
+    {
+      "id": "squat_rack_1",
+      "name": "Squat Station",
+      "bbox": [
+        100,
+        200,
+        400,
+        800
+      ]
+    },
+    {
+      "id": "dumbbell_rack_1",
+      "name": "Dumbbell Area",
+      "bbox": [
+        500,
+        250,
+        900,
+        750
+      ]
+    },
+    {
+      "id": "cable_station_1",
+      "name": "Cable Zone",
+      "bbox": [
+        950,
+        200,
+        1400,
+        850
+      ]
+    },
+    {
+      "id": "leg_press_sled_1",
+      "name": "Machine Station",
+      "bbox": [
+        1450,
+        250,
+        1850,
+        850
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "time": 0.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            810.6,
+            178.8,
+            1166.7,
+            927.8
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            988.6,
+            553.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 1.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            771.0,
+            166.6,
+            1179.9,
+            930.3
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            975.5,
+            548.5
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 2.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            848.6,
+            190.7,
+            1155.5,
+            952.8
+          ],
+          "confidence": 0.87,
+          "centroid": [
+            1002.1,
+            571.8
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 3.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            878.8,
+            199.1,
+            1122.2,
+            929.6
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            1000.5,
+            564.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 4.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            749.2,
+            160.3,
+            1205.0,
+            925.5
+          ],
+          "confidence": 0.83,
+          "centroid": [
+            977.1,
+            542.9
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 5.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            818.8,
+            170.7,
+            1140.4,
+            943.7
+          ],
+          "confidence": 0.88,
+          "centroid": [
+            979.6,
+            557.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 6.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            879.2,
+            193.4,
+            1148.7,
+            937.1
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            1013.9,
+            565.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 7.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            792.0,
+            183.1,
+            1166.8,
+            936.5
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            979.4,
+            559.8
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 8.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            776.3,
+            163.9,
+            1179.0,
+            923.8
+          ],
+          "confidence": 0.87,
+          "centroid": [
+            977.7,
+            543.8
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 9.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            823.8,
+            170.9,
+            1171.9,
+            935.7
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            997.9,
+            553.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 10.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            871.9,
+            196.8,
+            1123.3,
+            940.5
+          ],
+          "confidence": 0.82,
+          "centroid": [
+            997.6,
+            568.6
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 11.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            798.1,
+            176.7,
+            1170.0,
+            931.6
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            984.1,
+            554.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 12.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            783.5,
+            155.3,
+            1183.1,
+            923.0
+          ],
+          "confidence": 0.87,
+          "centroid": [
+            983.3,
+            539.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 13.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            862.4,
+            182.8,
+            1151.8,
+            943.8
+          ],
+          "confidence": 0.89,
+          "centroid": [
+            1007.1,
+            563.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 14.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            851.5,
+            192.0,
+            1129.2,
+            934.4
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            990.3,
+            563.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 15.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            759.0,
+            159.8,
+            1202.1,
+            928.6
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            980.6,
+            544.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 16.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            816.2,
+            169.0,
+            1133.1,
+            939.1
+          ],
+          "confidence": 0.89,
+          "centroid": [
+            974.7,
+            554.0
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 17.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            885.3,
+            191.5,
+            1140.8,
+            929.0
+          ],
+          "confidence": 0.82,
+          "centroid": [
+            1013.1,
+            560.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 18.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            790.0,
+            184.2,
+            1167.8,
+            930.3
+          ],
+          "confidence": 0.81,
+          "centroid": [
+            978.9,
+            557.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 19.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            779.6,
+            166.1,
+            1184.3,
+            925.1
+          ],
+          "confidence": 0.87,
+          "centroid": [
+            982.0,
+            545.6
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 20.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            824.2,
+            167.7,
+            1151.7,
+            941.6
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            987.9,
+            554.7
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 21.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            876.7,
+            197.3,
+            1131.0,
+            938.9
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            1003.8,
+            568.1
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 22.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            822.2,
+            180.6,
+            1166.2,
+            929.2
+          ],
+          "confidence": 0.82,
+          "centroid": [
+            994.2,
+            554.9
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 23.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            756.0,
+            159.9,
+            1192.7,
+            926.1
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            974.3,
+            543.0
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 24.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            856.0,
+            185.0,
+            1145.9,
+            946.4
+          ],
+          "confidence": 0.88,
+          "centroid": [
+            1001.0,
+            565.7
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 25.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            881.5,
+            198.2,
+            1123.9,
+            934.7
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            1002.7,
+            566.4
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 26.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            739.3,
+            169.5,
+            1203.3,
+            925.5
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            971.3,
+            547.5
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 27.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            817.2,
+            174.8,
+            1141.7,
+            936.0
+          ],
+          "confidence": 0.87,
+          "centroid": [
+            979.5,
+            555.4
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 28.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            886.4,
+            199.1,
+            1143.3,
+            934.3
+          ],
+          "confidence": 0.83,
+          "centroid": [
+            1014.8,
+            566.7
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 29.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            786.6,
+            191.6,
+            1160.9,
+            927.8
+          ],
+          "confidence": 0.82,
+          "centroid": [
+            973.8,
+            559.7
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 30.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            778.1,
+            165.7,
+            1190.0,
+            920.4
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            984.0,
+            543.1
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 31.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            851.3,
+            176.9,
+            1171.5,
+            940.1
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            1011.4,
+            558.5
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 32.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            869.5,
+            202.4,
+            1124.3,
+            933.5
+          ],
+          "confidence": 0.83,
+          "centroid": [
+            996.9,
+            567.9
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 33.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            783.8,
+            176.0,
+            1174.4,
+            926.6
+          ],
+          "confidence": 0.83,
+          "centroid": [
+            979.1,
+            551.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 34.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            772.6,
+            166.9,
+            1170.6,
+            936.9
+          ],
+          "confidence": 0.88,
+          "centroid": [
+            971.6,
+            551.9
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 35.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            873.0,
+            194.9,
+            1144.1,
+            942.0
+          ],
+          "confidence": 0.85,
+          "centroid": [
+            1008.5,
+            568.4
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 36.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            861.8,
+            193.1,
+            1131.1,
+            933.5
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            996.5,
+            563.3
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 37.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            757.5,
+            160.3,
+            1194.2,
+            920.4
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            975.8,
+            540.4
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 38.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            835.1,
+            175.4,
+            1124.7,
+            949.5
+          ],
+          "confidence": 0.89,
+          "centroid": [
+            979.9,
+            562.4
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 39.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            880.9,
+            199.2,
+            1129.1,
+            928.1
+          ],
+          "confidence": 0.8,
+          "centroid": [
+            1005.0,
+            563.6
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 40.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            757.6,
+            168.0,
+            1175.1,
+            933.9
+          ],
+          "confidence": 0.83,
+          "centroid": [
+            966.3,
+            550.9
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 41.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            775.4,
+            163.8,
+            1141.2,
+            924.6
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            958.3,
+            544.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 42.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            842.7,
+            186.0,
+            1113.7,
+            939.3
+          ],
+          "confidence": 0.84,
+          "centroid": [
+            978.2,
+            562.6
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 43.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            800.8,
+            192.8,
+            1115.2,
+            941.3
+          ],
+          "confidence": 0.81,
+          "centroid": [
+            958.0,
+            567.1
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 44.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            778.8,
+            167.0,
+            1169.4,
+            925.4
+          ],
+          "confidence": 0.86,
+          "centroid": [
+            974.1,
+            546.2
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "time": 45.0,
+      "count": 1,
+      "persons": [
+        {
+          "id": "P-DEMO-01",
+          "bbox": [
+            780.5,
+            168.0,
+            1142.9,
+            938.1
+          ],
+          "confidence": 0.87,
+          "centroid": [
+            961.7,
+            553.1
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "id": "squat_rack_1",
+          "name": "Squat Station",
+          "bbox": [
+            100,
+            200,
+            400,
+            800
+          ],
+          "status": "available"
+        },
+        {
+          "id": "dumbbell_rack_1",
+          "name": "Dumbbell Area",
+          "bbox": [
+            500,
+            250,
+            900,
+            750
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "cable_station_1",
+          "name": "Cable Zone",
+          "bbox": [
+            950,
+            200,
+            1400,
+            850
+          ],
+          "status": "in_use"
+        },
+        {
+          "id": "leg_press_sled_1",
+          "name": "Machine Station",
+          "bbox": [
+            1450,
+            250,
+            1850,
+            850
+          ],
+          "status": "available"
+        }
+      ]
+    }
+  ]
+}
