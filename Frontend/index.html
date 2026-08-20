@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeakGYM — Facility Analytics & Monitoring System</title>
+  <meta name="description"
+    content="Automated gym monitoring system with live headcount, zone heatmaps, equipment tracking, and smart operational recommendations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Chart.js for Peak-Time & Trend Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- =========================================================================
+       1. LOGIN / WELCOME VIEW
+       ========================================================================= -->
+  <section id="loginView" class="login-container">
+    <div class="login-glass-card">
+      <div class="login-brand">
+        <div class="brand-logo-large">
+          <div class="pulse-ring"></div>
+          <i data-lucide="activity" class="brand-icon-lg"></i>
+        </div>
+        <h1>PEAK<span>GYM</span></h1>
+        <p class="brand-desc">Automated Facility Intelligence & Capacity Optimization</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="usernameInput"><i data-lucide="user"></i> Username</label>
+          <input type="text" id="usernameInput" placeholder="Enter username" autocomplete="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="passwordInput"><i data-lucide="lock"></i> Password</label>
+          <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="current-password"
+            required>
+        </div>
+
+        <div id="loginErrorMsg" class="login-error-msg" style="display: none;">
+          <i data-lucide="alert-circle"></i> Invalid username or password
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="loginSubmitBtn">
+          <span>Sign In to Dashboard</span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. AUTHENTICATED APP SHELL (Hidden until logged in)
+       ========================================================================= -->
+  <div id="appShell" class="app-shell" style="display: none;">
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav" id="topNav">
+      <div class="nav-left">
+        <div class="nav-brand">
+          <div class="brand-logo">
+            <div class="pulse-ring"></div>
+            <i data-lucide="activity" class="brand-icon"></i>
+          </div>
+          <div class="brand-text">
+            <h2>PEAK<span>GYM</span></h2>
+          </div>
+        </div>
+
+        <!-- Primary Page Navigation Tabs (1 Feature per Page) -->
+        <nav class="main-page-nav">
+          <button class="nav-tab active" data-page="pageLiveFeed">
+            <i data-lucide="video"></i>
+            <span>Live Camera Feed</span>
+          </button>
+          <button class="nav-tab" data-page="pageHeatmap">
+            <i data-lucide="map"></i>
+            <span>Space Heatmap</span>
+          </button>
+          <button class="nav-tab" data-page="pageEquipment">
+            <i data-lucide="dumbbell"></i>
+            <span>Equipment Status</span>
+          </button>
+          <button class="nav-tab" data-page="pageAnalytics">
+            <i data-lucide="line-chart"></i>
+            <span>Analytics & Insights</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Right Header Actions & Clock -->
+      <div class="nav-right">
+        <!-- Backend Status Pill -->
+        <div class="status-pill" id="backendStatusPill" title="System Connection Status">
+          <span class="status-dot online" id="statusDot"></span>
+          <span id="backendStatusText">Backend: Online</span>
+        </div>
+
+        <!-- Clock -->
+        <div class="clock-widget">
+          <div class="clock-display" id="liveClock">
+            00:00:00 AM | Mon, Jan 1
+          </div>
+        </div>
+
+        <!-- Logout Button -->
+        <button id="logoutBtn" class="icon-btn" title="Sign Out">
+          <i data-lucide="log-out"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Top Headline KPI Bar (Clean vertical layout: Label -> Numbers side-by-side -> Badge under) -->
+    <div class="quick-kpi-bar">
+      <div class="quick-kpi-item">
+        <span class="qk-label">CURRENT HEADCOUNT</span>
+        <div class="qk-value-row">
+          <span class="qk-num-main" id="headcountVal">24</span>
+          <span class="qk-num-sub">/ <span id="capacityVal">50</span> Max</span>
+        </div>
+        <div class="qk-badge-row">
+          <span class="qk-badge normal" id="occupancyBadge">48% Capacity</span>
+        </div>
+      </div>
+
+      <div class="quick-kpi-item">
+        <span class="qk-label">ACTIVE EQUIPMENT</span>
+        <div class="qk-value-row">
+          <span class="qk-num-main" id="equipmentActiveRatio">8 / 12</span>
+          <span class="qk-num-sub">In Use</span>
+        </div>
+        <div class="qk-badge-row">
+          <span class="qk-badge violet" id="eqActiveBadge">100% Active</span>
+        </div>
+      </div>
+
+      <div class="quick-kpi-item">
+        <span class="qk-label">EXPECTED PEAK TIME</span>
+        <div class="qk-value-row">
+          <span class="qk-num-main text-cyan" id="peakHourVal">06:00 PM – 08:00 PM</span>
+        </div>
+        <div class="qk-badge-row">
+          <span class="qk-badge cyan" id="peakStatusBadge">Est. Load: 42 People</span>
+        </div>
+      </div>
+
+      <div class="quick-kpi-item">
+        <span class="qk-label">CROWD DISTRIBUTION</span>
+        <div class="qk-value-row">
+          <span class="qk-num-main text-amber" id="zoneImbalanceVal">40%</span>
+          <span class="qk-num-sub">Disparity</span>
+        </div>
+        <div class="qk-badge-row">
+          <span class="qk-badge alert" id="zoneAlertBadge">Rebalance Suggested</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Pages Container -->
+    <main class="page-viewport">
+
+      <!-- =====================================================================
+           PAGE 1: LIVE VISION CAMERA STREAM & REAL-TIME TRACKING
+           ===================================================================== -->
+      <section id="pageLiveFeed" class="app-page active">
+        <div class="page-header-row">
+          <div class="page-title-group">
+            <div class="live-rec-dot"></div>
+            <h3 id="cameraFeedTitle">Surveillance Stream — CAM 01 (Squat Rack & Bench Area)</h3>
+          </div>
+          <div class="stream-controls">
+            <label class="toggle-switch" title="Toggle YOLO Person Bounding Boxes">
+              <input type="checkbox" id="toggleAiDetections" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label">Person Bounding Boxes</span>
+            </label>
+            <label class="toggle-switch" title="Toggle Equipment ROI Zones">
+              <input type="checkbox" id="toggleRoiOverlay" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label">Equipment ROIs</span>
+            </label>
+            <button id="videoPlayPauseBtn" class="icon-btn" title="Play/Pause Video Stream">
+              <i data-lucide="pause"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Multi-Camera Angle Switcher -->
+        <div class="camera-switcher-bar" id="cameraSwitcherBar">
+          <button class="cam-btn active" data-cam-id="cam1" data-video="assets/cam1.mp4" data-title="CAM 01 — Squat Rack & Bench Area">
+            <span class="cam-dot"></span>
+            <span>CAM 01 — Squat & Bench</span>
+            <span class="cam-badge" id="cam1Badge">3 Units</span>
+          </button>
+          <button class="cam-btn" data-cam-id="cam2" data-video="assets/cam2.mp4" data-title="CAM 02 — Free Weights Aisle">
+            <span class="cam-dot"></span>
+            <span>CAM 02 — Free Weights</span>
+            <span class="cam-badge" id="cam2Badge">3 Units</span>
+          </button>
+          <button class="cam-btn" data-cam-id="cam3" data-video="assets/cam3.mp4" data-title="CAM 03 — Cable & Functional Zone">
+            <span class="cam-dot"></span>
+            <span>CAM 03 — Cable & Functional</span>
+            <span class="cam-badge" id="cam3Badge">3 Units</span>
+          </button>
+          <button class="cam-btn" data-cam-id="cam4" data-video="assets/cam4.mp4" data-title="CAM 04 — Machine Row">
+            <span class="cam-dot"></span>
+            <span>CAM 04 — Machine Row</span>
+            <span class="cam-badge" id="cam4Badge">3 Units</span>
+          </button>
+          <button class="cam-btn" data-cam-id="demo" data-video="assets/demo_video.mp4" data-title="CAM Overview — Main Floor Wide Angle">
+            <span class="cam-dot"></span>
+            <span>Overview (Wide Angle)</span>
+            <span class="cam-badge">Main</span>
+          </button>
+        </div>
+
+        <div class="video-panel-large">
+          <div class="video-wrapper-large" id="videoContainer">
+            <video id="gymVideoFeed" autoplay loop muted playsinline>
+              <source src="assets/cam1.mp4" type="video/mp4">
+            </video>
+            <canvas id="aiOverlayCanvas"></canvas>
+
+            <div class="video-hud">
+              <div class="hud-item"><i data-lucide="camera"></i> <span id="hudCameraName">CAM 01: Squat Rack & Bench Area</span></div>
+              <div class="hud-item"><i data-lucide="eye"></i> FPS: <span id="hudFps">58.6</span></div>
+              <div class="hud-item"><i data-lucide="user-check"></i> Live Detected: <span id="hudTrackedCount">3 Persons</span></div>
+              <div class="hud-item"><i data-lucide="scan"></i> <span id="hudDetectionMode">YOLOv8 + Equipment ROIs</span></div>
+            </div>
+          </div>
+
+          <div class="feed-bottom-info">
+            <div class="feed-info-text">
+              <i data-lucide="info"></i>
+              <span id="feedStatusDescription">Real-time YOLOv8 person detections & equipment telemetry actively synced to video playback.</span>
+            </div>
+            <div class="video-source-selector">
+              <select id="videoSelect" title="Select Video Demo Feed">
+                <option value="cam1" selected>CAM 01 — Squat Rack & Bench Area (cam1.mp4)</option>
+                <option value="cam2">CAM 02 — Free Weights Aisle (cam2.mp4)</option>
+                <option value="cam3">CAM 03 — Cable & Functional Zone (cam3.mp4)</option>
+                <option value="cam4">CAM 04 — Machine Row (cam4.mp4)</option>
+                <option value="demo">CAM Overview — Main Surveillance (demo_video.mp4)</option>
+                <option value="simulated">Synthesized Vision Feed (Canvas Simulator)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           PAGE 2: INTERACTIVE GYM FLOOR HEATMAP & SPACE DISTRIBUTION
+           ===================================================================== -->
+      <section id="pageHeatmap" class="app-page">
+        <div class="page-header-row">
+          <div class="page-title-group">
+            <i data-lucide="map" class="text-cyan icon-title"></i>
+            <div>
+              <h3>Interactive Gym Floor Heatmap</h3>
+              <p class="section-subtitle">Real-time crowd density distribution across gym functional zones</p>
+            </div>
+          </div>
+          <div class="heatmap-legend">
+            <span class="legend-item"><span class="color-dot low"></span> Low (< 25%)</span>
+                <span class="legend-item"><span class="color-dot med"></span> Moderate (25–50%)</span>
+                <span class="legend-item"><span class="color-dot high"></span> High (50–80%)</span>
+                <span class="legend-item"><span class="color-dot alert"></span> Congested (> 80%)</span>
+          </div>
+        </div>
+
+        <div class="heatmap-page-layout">
+          <!-- Canvas Floor Map -->
+          <div class="heatmap-canvas-container-lg" id="heatmapContainer">
+            <canvas id="gymFloorCanvas"></canvas>
+            <div class="zone-tooltip" id="zoneTooltip" style="display: none;"></div>
+          </div>
+
+          <!-- Zone Detailed Breakdown Cards -->
+          <div class="zones-sidebar">
+            <h4 class="sidebar-title"><i data-lucide="layers"></i> Zone Occupancy Breakdown</h4>
+            <div class="zones-cards-list" id="zonesSummaryGrid">
+              <!-- Populated dynamically via script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           PAGE 3: EQUIPMENT TELEMETRY & MALFUNCTION DETECTOR
+           ===================================================================== -->
+      <section id="pageEquipment" class="app-page">
+        <div class="page-header-row">
+          <div class="page-title-group">
+            <i data-lucide="dumbbell" class="text-emerald icon-title"></i>
+            <div>
+              <h3>Equipment Telemetry & Maintenance Alerts</h3>
+              <p class="section-subtitle">Tracks continuous utilization and flags possible broken or blocked machines
+              </p>
+            </div>
+          </div>
+          <div class="panel-filter-group">
+            <button class="filter-tab active" data-filter="all">All Units</button>
+            <button class="filter-tab" data-filter="in_use">In Use</button>
+            <button class="filter-tab" data-filter="available">Available</button>
+            <button class="filter-tab" data-filter="malfunction">Maintenance Alerts</button>
+          </div>
+        </div>
+
+        <div class="equipment-table-container">
+          <table class="data-table" id="equipmentTable">
+            <thead>
+              <tr>
+                <th>Equipment ID</th>
+                <th>Equipment Name</th>
+                <th>Zone Location</th>
+                <th>Current Status</th>
+                <th>Idle Duration</th>
+                <th>Monthly Usage Rate</th>
+                <th>Telemetry Actions</th>
+              </tr>
+            </thead>
+            <tbody id="equipmentTableBody">
+              <!-- Populated dynamically via script.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           PAGE 4: ANALYTICS, PEAK TIMES & SMART RECOMMENDATIONS
+           ===================================================================== -->
+      <section id="pageAnalytics" class="app-page">
+        <div class="analytics-layout-grid">
+
+          <!-- Peak Time Historical & Forecast Chart -->
+          <div class="dashboard-panel chart-panel-dedicated">
+            <div class="panel-header">
+              <div class="panel-title-group">
+                <i data-lucide="bar-chart-3" class="text-cyan"></i>
+                <div>
+                  <h3>Facility Peak Hours & Aggregations</h3>
+                  <p class="section-subtitle">Hourly occupant volume compared against 30-day baseline</p>
+                </div>
+              </div>
+              <div class="chart-controls">
+                <button class="chart-time-btn active" data-chart-range="today">Today's Hourly (24h)</button>
+                <button class="chart-time-btn" data-chart-range="week">Weekly Peak Matrix</button>
+              </div>
+            </div>
+            <div class="chart-canvas-wrapper-lg">
+              <canvas id="peakTimeChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Smart Operational Recommendations Panel -->
+          <div class="dashboard-panel recommendations-panel-dedicated">
+            <div class="panel-header">
+              <div class="panel-title-group">
+                <div class="rec-icon-wrap">
+                  <i data-lucide="compass"></i>
+                </div>
+                <div>
+                  <h3>Operational Recommendations</h3>
+                  <p class="section-subtitle">Data-driven floor space & scheduling optimization</p>
+                </div>
+              </div>
+              <span class="rec-timestamp" id="llmTimestamp">Generated: Just now</span>
+            </div>
+
+            <div class="recommendation-content" id="recommendationContainer">
+              <div class="recommendation-badge-row">
+                <span class="severity-tag high" id="recSeverityTag">
+                  <i data-lucide="alert-triangle"></i> HIGH PRIORITY ADVISORY
+                </span>
+                <span class="rule-ref-tag" id="recRuleRef">Triggered by Rule #1: Zone Imbalance</span>
+              </div>
+
+              <div class="rec-quote-box">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <p class="rec-narrative" id="recNarrativeText">
+                  "We detected a <strong>42% usage imbalance</strong> between the Free Weights Zone (88% peak load) and
+                  the Functional Training Zone (18% load). Members experienced average wait times of 7.4 minutes on
+                  dumbbells while floor space in Zone D remained empty. Consider shifting 2 adjustable benches to the
+                  Functional area to disperse congestion."
+                </p>
+              </div>
+
+              <div class="grounded-metrics-grid">
+                <div class="grounded-metric-item">
+                  <span class="gm-label">Free Weights Load</span>
+                  <span class="gm-val text-alert" id="gmFreeWeights">88%</span>
+                </div>
+                <div class="grounded-metric-item">
+                  <span class="gm-label">Functional Area Load</span>
+                  <span class="gm-val text-cyan" id="gmFunctional">18%</span>
+                </div>
+                <div class="grounded-metric-item">
+                  <span class="gm-label">Peak Time Mismatch</span>
+                  <span class="gm-val text-amber" id="gmPeakMismatch">+1.5 hrs</span>
+                </div>
+                <div class="grounded-metric-item">
+                  <span class="gm-label">Idle Alert Flag</span>
+                  <span class="gm-val text-alert" id="gmIdleAlert">Squat Rack #2</span>
+                </div>
+              </div>
+
+              <div class="rec-actions-bar">
+                <button class="btn btn-primary" id="openReportBtn" title="View Monthly Intelligence Audit">
+                  <i data-lucide="file-text"></i>
+                  <span>Monthly Intelligence Report</span>
+                </button>
+                <button class="btn btn-secondary btn-sm" id="generateNewRecBtn">
+                  <i data-lucide="refresh-cw"></i> Re-evaluate
+                </button>
+                <button class="btn btn-outline btn-sm" id="viewRuleConfigBtn">
+                  <i data-lucide="sliders"></i> Rule Thresholds
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- =========================================================================
+       MONTHLY REPORT MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="reportModal" style="display: none;">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="file-check-2" class="text-emerald"></i>
+          <h3>Monthly Facility Intelligence Audit</h3>
+        </div>
+        <button class="icon-btn-close" id="closeReportModalBtn">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body" id="reportBody">
+        <div class="report-meta-header">
+          <div>
+            <h4>Audit Period: Current Month</h4>
+            <p>PeakGYM Automated Telemetry Audit</p>
+          </div>
+          <div class="report-status-badge">
+            <span class="badge-tag">STATUS: GENERATED</span>
+          </div>
+        </div>
+
+        <div class="report-stats-grid">
+          <div class="rep-stat-box">
+            <span class="rep-label">Average Monthly Occupancy</span>
+            <span class="rep-num">64.2%</span>
+          </div>
+          <div class="rep-stat-box">
+            <span class="rep-label">Absolute Peak Window</span>
+            <span class="rep-num">18:30 - 19:45</span>
+          </div>
+          <div class="rep-stat-box">
+            <span class="rep-label">Most Utilized Equipment</span>
+            <span class="rep-num">Cable Crossover #1 (89%)</span>
+          </div>
+          <div class="rep-stat-box">
+            <span class="rep-label">Detected Malfunction Flags</span>
+            <span class="rep-num">3 Instances</span>
+          </div>
+        </div>
+
+        <div class="report-narrative-section">
+          <h5>Executive Operations Summary</h5>
+          <p id="monthlyNarrative">
+            During this period, overall facility throughput increased by 14%. The primary operational bottleneck remains
+            the Free Weights zone between 18:00 and 20:30 on weekdays. Leg Press #2 had an anomaly flag on the 14th with
+            180 minutes of zero occupancy during peak hours, confirmed as a pin mechanism issue. Staff shift scheduling
+            was adjusted by +1.5 hours to accommodate the late evening rush.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="printReportBtn">
+          <i data-lucide="printer"></i> Print / PDF
+        </button>
+        <button class="btn btn-primary" id="emailReportBtn">
+          <i data-lucide="mail"></i> Send via Email (Resend API)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
