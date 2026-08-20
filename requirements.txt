@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+matplotlib
+apscheduler
+google-genai
+resend
+requests
+python-dotenv
+
+# Person 1 — Computer Vision (Detection & Tracking)
+ultralytics>=8.3.0
+opencv-python>=4.9.0
