@@ -1,0 +1,30 @@
+{
+  "zone_imbalance": {
+    "description": "One zone is much busier than the gym average at the same hour.",
+    "ratio_threshold": 2.0,
+    "min_person_count": 5
+  },
+  "idle_equipment": {
+    "description": "Equipment has been sitting idle for too long during open hours.",
+    "idle_minutes_threshold": 2,
+    "_demo_note": "Set low (2 min) for demo purposes \u2014 restore to 45 for a realistic production config."
+  },
+  "underused_zone": {
+    "description": "A zone stays consistently near-empty during normal operating hours.",
+    "max_person_count_threshold": 2,
+    "lookback_hours": 24
+  },
+  "peak_time_mismatch": {
+    "description": "Actual busy hours differ from the gym's expected/scheduled peak hours (e.g. staffing not aligned with real demand).",
+    "expected_peak_hours": [
+      6,
+      7,
+      8,
+      17,
+      18,
+      19,
+      20
+    ],
+    "deviation_threshold": 1.5
+  }
+}

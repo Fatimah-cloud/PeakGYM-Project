@@ -1,0 +1,64 @@
+{
+  "_comment": "Coordinates are pixel boxes [x1, y1, x2, y2] calibrated against the NEW demo_video.mp4 (1920x1080, treadmill row, single runner). This is a DIFFERENT camera layout than the old gym.mp4 (multi-zone strength area) \u2014 don't mix zone IDs between the two configs. NOTE: idle threshold set to 2.5 min for demo purposes (gives a visible window where untouched equipment shows Available before flipping to Maintenance Alert) \u2014 restore to 5 for a realistic production config.",
+  "frame_reference_resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "zones": [
+    {
+      "id": "zone_treadmill_row",
+      "name": "Treadmill Row (Cardio)",
+      "type": "area",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "id": "treadmill_left",
+      "name": "Treadmill (Left)",
+      "type": "treadmill",
+      "zone_id": "zone_treadmill_row",
+      "bbox": [
+        230,
+        330,
+        760,
+        830
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 1.0
+    },
+    {
+      "id": "treadmill_center",
+      "name": "Treadmill (Center) \u2014 In Use",
+      "type": "treadmill",
+      "zone_id": "zone_treadmill_row",
+      "bbox": [
+        740,
+        140,
+        1230,
+        960
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 1.0
+    },
+    {
+      "id": "treadmill_right",
+      "name": "Treadmill (Right)",
+      "type": "treadmill",
+      "zone_id": "zone_treadmill_row",
+      "bbox": [
+        1200,
+        90,
+        1760,
+        660
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 1.0
+    }
+  ]
+}

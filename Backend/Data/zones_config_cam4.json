@@ -1,0 +1,64 @@
+{
+  "_comment": "Auto-generated for CAM 04 \u2014 Machine Row from generate_cam_tracks.py's CAMERA_CONFIGS (the source of truth for this camera's real equipment positions). Used by live_cv_ingest.py's continuous background ingestion \u2014 separate from the pre-computed replay JSON used for the Live Camera Feed visual panel.",
+  "frame_reference_resolution": {
+    "width": 816,
+    "height": 464
+  },
+  "zones": [
+    {
+      "id": "zone_machine_row",
+      "name": "Machine Row",
+      "type": "area",
+      "bbox": [
+        0,
+        0,
+        816,
+        464
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "id": "leg_press_sled_1",
+      "name": "Leg Press / Hack Squat #1",
+      "type": "unknown",
+      "zone_id": "zone_machine_row",
+      "bbox": [
+        180,
+        40,
+        320,
+        260
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "leg_press_sled_2",
+      "name": "Leg Press / Hack Squat #2",
+      "type": "unknown",
+      "zone_id": "zone_machine_row",
+      "bbox": [
+        400,
+        80,
+        520,
+        330
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "chest_press_machine_1",
+      "name": "Chest Press Machine",
+      "type": "unknown",
+      "zone_id": "zone_machine_row",
+      "bbox": [
+        600,
+        240,
+        800,
+        455
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    }
+  ]
+}

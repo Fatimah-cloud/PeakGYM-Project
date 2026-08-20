@@ -1,0 +1,23 @@
+{
+  "_NOTE": "bbox values below are PLACEHOLDERS. Once your 4 camera clips are trimmed, either run auto_calibrate_zones.py against each clip to auto-suggest real boxes, or grab a still frame and eyeball coordinates manually — then verify with draw_zones.py before trusting them. These zone/equipment IDs match seed_gym_history.py exactly, so live detections and the seeded 2-month history land in the same namespace.",
+  "frame_reference_resolution": [1920, 1080],
+  "zones": [
+    { "id": "zone_squat_bench", "name": "Squat Rack & Bench Area", "bbox": [0, 0, 480, 1080] },
+    { "id": "zone_freeweights_aisle", "name": "Free Weights Aisle", "bbox": [480, 0, 780, 1080] },
+    { "id": "zone_cable_stations", "name": "Cable / Functional Trainer Zone", "bbox": [780, 0, 1380, 1080] },
+    { "id": "zone_machine_row", "name": "Machine Row", "bbox": [1380, 0, 1920, 1080] }
+  ],
+  "equipment": [
+    { "id": "squat_rack_1", "name": "Squat Rack #1", "type": "squat_rack", "zone_id": "zone_squat_bench", "bbox": [30, 100, 200, 400], "idle_threshold_minutes": 5, "busy_threshold_minutes": 45 },
+    { "id": "squat_rack_2", "name": "Squat Rack #2", "type": "squat_rack", "zone_id": "zone_squat_bench", "bbox": [230, 100, 400, 400], "idle_threshold_minutes": 5, "busy_threshold_minutes": 45 },
+    { "id": "adjustable_bench_1", "name": "Adjustable Bench #1", "type": "bench", "zone_id": "zone_squat_bench", "bbox": [60, 500, 220, 650], "idle_threshold_minutes": 5, "busy_threshold_minutes": 30 },
+    { "id": "adjustable_bench_2", "name": "Adjustable Bench #2", "type": "bench", "zone_id": "zone_squat_bench", "bbox": [260, 500, 420, 650], "idle_threshold_minutes": 5, "busy_threshold_minutes": 30 },
+    { "id": "dumbbell_rack_1", "name": "Dumbbell Rack", "type": "dumbbell_rack", "zone_id": "zone_freeweights_aisle", "bbox": [520, 200, 740, 900], "idle_threshold_minutes": 3, "busy_threshold_minutes": 20 },
+    { "id": "cable_station_1", "name": "Cable Crossover #1", "type": "cable_machine", "zone_id": "zone_cable_stations", "bbox": [820, 150, 1000, 500], "idle_threshold_minutes": 5, "busy_threshold_minutes": 40 },
+    { "id": "cable_station_2", "name": "Cable Crossover #2", "type": "cable_machine", "zone_id": "zone_cable_stations", "bbox": [1050, 150, 1230, 500], "idle_threshold_minutes": 5, "busy_threshold_minutes": 40 },
+    { "id": "cable_station_3", "name": "Cable Crossover #3", "type": "cable_machine", "zone_id": "zone_cable_stations", "bbox": [1250, 150, 1360, 500], "idle_threshold_minutes": 5, "busy_threshold_minutes": 40 },
+    { "id": "leg_press_sled_1", "name": "Leg Press / Hack Squat Sled #1", "type": "leg_press", "zone_id": "zone_machine_row", "bbox": [1410, 150, 1600, 450], "idle_threshold_minutes": 5, "busy_threshold_minutes": 35 },
+    { "id": "leg_press_sled_2", "name": "Leg Press / Hack Squat Sled #2", "type": "leg_press", "zone_id": "zone_machine_row", "bbox": [1620, 150, 1810, 450], "idle_threshold_minutes": 5, "busy_threshold_minutes": 35 },
+    { "id": "chest_press_machine_1", "name": "Chest / Shoulder Press Machine", "type": "plate_loaded_press", "zone_id": "zone_machine_row", "bbox": [1450, 500, 1650, 750], "idle_threshold_minutes": 5, "busy_threshold_minutes": 30 }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "_comment": "Auto-generated for CAM 01 \u2014 Squat Rack & Bench Area from generate_cam_tracks.py's CAMERA_CONFIGS (the source of truth for this camera's real equipment positions). Used by live_cv_ingest.py's continuous background ingestion \u2014 separate from the pre-computed replay JSON used for the Live Camera Feed visual panel.",
+  "frame_reference_resolution": {
+    "width": 832,
+    "height": 384
+  },
+  "zones": [
+    {
+      "id": "zone_squat_bench",
+      "name": "Squat Rack & Bench Area",
+      "type": "area",
+      "bbox": [
+        0,
+        0,
+        832,
+        384
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "id": "squat_rack_1",
+      "name": "Squat Rack #1",
+      "type": "unknown",
+      "zone_id": "zone_squat_bench",
+      "bbox": [
+        50,
+        40,
+        240,
+        360
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "squat_rack_2",
+      "name": "Squat Rack #2",
+      "type": "unknown",
+      "zone_id": "zone_squat_bench",
+      "bbox": [
+        310,
+        50,
+        480,
+        360
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "adjustable_bench_1",
+      "name": "Adjustable Bench #1",
+      "type": "unknown",
+      "zone_id": "zone_squat_bench",
+      "bbox": [
+        620,
+        60,
+        800,
+        350
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    }
+  ]
+}

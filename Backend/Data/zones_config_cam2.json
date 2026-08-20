@@ -1,0 +1,64 @@
+{
+  "_comment": "Auto-generated for CAM 02 \u2014 Free Weights Aisle from generate_cam_tracks.py's CAMERA_CONFIGS (the source of truth for this camera's real equipment positions). Used by live_cv_ingest.py's continuous background ingestion \u2014 separate from the pre-computed replay JSON used for the Live Camera Feed visual panel.",
+  "frame_reference_resolution": {
+    "width": 816,
+    "height": 464
+  },
+  "zones": [
+    {
+      "id": "zone_freeweights_aisle",
+      "name": "Free Weights Aisle",
+      "type": "area",
+      "bbox": [
+        0,
+        0,
+        816,
+        464
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "id": "dumbbell_rack_1",
+      "name": "Dumbbell Rack Main",
+      "type": "unknown",
+      "zone_id": "zone_freeweights_aisle",
+      "bbox": [
+        100,
+        160,
+        340,
+        430
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "adjustable_bench_2",
+      "name": "Flat Workout Bench",
+      "type": "unknown",
+      "zone_id": "zone_freeweights_aisle",
+      "bbox": [
+        320,
+        150,
+        480,
+        320
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "free_weight_station",
+      "name": "Free Weight Area",
+      "type": "unknown",
+      "zone_id": "zone_freeweights_aisle",
+      "bbox": [
+        500,
+        50,
+        650,
+        260
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    }
+  ]
+}

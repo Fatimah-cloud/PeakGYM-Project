@@ -1,0 +1,64 @@
+{
+  "_comment": "Auto-generated for CAM 03 \u2014 Cable & Functional Zone from generate_cam_tracks.py's CAMERA_CONFIGS (the source of truth for this camera's real equipment positions). Used by live_cv_ingest.py's continuous background ingestion \u2014 separate from the pre-computed replay JSON used for the Live Camera Feed visual panel.",
+  "frame_reference_resolution": {
+    "width": 832,
+    "height": 464
+  },
+  "zones": [
+    {
+      "id": "zone_cable_stations",
+      "name": "Cable / Functional Trainer Zone",
+      "type": "area",
+      "bbox": [
+        0,
+        0,
+        832,
+        464
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "id": "cable_station_1",
+      "name": "Cable Crossover #1",
+      "type": "unknown",
+      "zone_id": "zone_cable_stations",
+      "bbox": [
+        140,
+        80,
+        340,
+        420
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "cable_station_2",
+      "name": "Cable Crossover #2",
+      "type": "unknown",
+      "zone_id": "zone_cable_stations",
+      "bbox": [
+        330,
+        120,
+        460,
+        420
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    },
+    {
+      "id": "cable_station_3",
+      "name": "Functional Dual Pulley",
+      "type": "unknown",
+      "zone_id": "zone_cable_stations",
+      "bbox": [
+        450,
+        60,
+        650,
+        260
+      ],
+      "idle_threshold_minutes": 2.5,
+      "busy_threshold_minutes": 45
+    }
+  ]
+}
